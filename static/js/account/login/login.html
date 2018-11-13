@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="login-panel panel panel-default">
+                <div class="panel-heading">
+                    <label class="panel-title">Note</label>
+                </div>
+                <div class="panel-body">
+                    <form id="login_form" name="frmLogin" focus-first>
+                        <fieldset>
+                            <div class="form-group text-left" ng-class="{'has-error': vmLogin.username}">
+                                <h5 for="login_username">Username</h5>
+                                    <input type="text" id="login_username" autocomplete="off" class="form-control"  ng-model="vmLogin.user.username"  placeholder="Username" ng-change="vmLogin.username=false; vmLogin.status = '';"  autofocus  required>
+                            </div>
+                            <div class="form-group text-left" ng-class="{'has-error': vmLogin.pass}">
+                                <h5 for="login_password">Password</h5>
+                                <input class="form-control" placeholder="Password" autocomplete="off" name="password" type="password" ng-model="vmLogin.user.password" ng-change="vmLogin.pass=false; vmLogin.status = '';" required>
+                            </div>
+                            <div class="form-group text-left has-error" ng-show="vmLogin.status.length > 0">
+                                <span class="help-block">{{vmLogin.status}}</span>
+                            </div>
+                            <button ng-click="vmLogin.login(vmLogin.user, frmLogin.$valid)" class="btn btn-lg btn-success btn-block">Login</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

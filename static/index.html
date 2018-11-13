@@ -1,0 +1,72 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>Note</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        
+        <!-- build:css(.) styles/vendor.css -->
+        <!-- bower:css -->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/sb-admin-2.css">
+        <link rel="stylesheet" href="styles/timeline.css">
+        <link rel="stylesheet" href="bower_components/metisMenu/dist/metisMenu.min.css">
+        <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.min.css">
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" type="text/css">
+        <!-- endbuild -->
+
+        <!-- build:js(.) scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script src="bower_components/angular-messages/angular-messages.js"></script>
+        <script src="bower_components/angular-loading-bar/build/loading-bar.min.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+        <script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="js/app.js"></script>
+        <script src="js/account/login/login.controller.js"></script>
+        <script src="js/account/login/logout.controller.js"></script>
+        <script src="js/account/login/logout.controller.js"></script>
+        <script src="js/account/session.service.js"></script>
+        <script src="js/components/sb-admin-2.js"></script>
+        <script src="js/components/alert/alert.service.js"></script>
+        <script src="js/components/alert/alert.directive.js"></script>
+        <script src="js/components/confirmation/confirmation.controller.js"></script>
+        <script src="js/components/pagination/pagination.directive.js"></script>
+        <script src="js/components/validation/focus-first.directive.js"></script>
+        <script src="js/components/validation/validation.directive.js"></script>
+        <script src="js/interceptors/notification.interceptor.js"></script>
+        <script src="js/layout/header.notification.js"></script>
+        <script src="js/layout/header.js"></script>
+        <script src="js/layout/sidebar.js"></script>
+        <script src="js/entities/home/home.js"></script>
+        <script src="js/entities/notes/notes.controller.js"></script>
+        <script src="js/entities/notes/notes-new.controller.js"></script>
+        <script src="js/entities/notes/notes-edit.controller.js"></script>
+        <script src="js/entities/notes/notes.service.js"></script>
+        <script src="js/entities/notes/notes.state.js"></script>
+        <!-- endbuild -->
+    </head>
+    <body>
+        <div ng-app="noteApp">
+            <div ui-view></div>
+        </div>
+    </body>
+</html>

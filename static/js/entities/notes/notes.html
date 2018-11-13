@@ -1,0 +1,48 @@
+<div>
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Notes</h1>
+        </div>
+    </div>
+        <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div id="dataTables-example_filter" class="dataTables_filter">
+                        <input type="text" class="form-control" ng-keydown="vmNotes.keySearch($event)"  ng-model="vmNotes.pagination.notes.searchQuery" placeholder="Search" style="display: inline;width: 15%;margin-right: 20px;">
+                        <label>Show</label>
+                            <select class="input-sm" ng-change="vmNotes.search()"  ng-model="vmNotes.pagination.itemsPerPage"  ng-init="vmNotes.pagination.itemsPerPage = vmNotes.itemsPerPageOption[0]" ng-options="o as o for o in vmNotes.itemsPerPageOption"></select>
+                        <label>entries</label>  
+                        <button ui-sref="dashboard.notesnew" class="btn btn-primary pull-right"><i class="fa fa-plus" aria-hidden="true"></i> Create Note</button>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                        <thead>
+                            <tr>
+                                <th width="90%"><a href="" ng-click="vmNotes.sort('title')">Title</a></th>
+                                <th width="10%"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="gradeA odd" role="row" ng-repeat="note in vmNotes.notes">
+                                <td><a ui-sref="dashboard.notesedit({id:note.id})">{{note.title}}</a></td>
+                                <td class="text-center">
+	                                <button type="button" class="btn btn-warning btn-circle" ng-click="vmNotes.deleteNote(note.id)">
+	                                    <i class="fa fa-times"></i>
+	                                </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <pagination ng-model="vmNotes.pagination.notes.pageNumber"
+                                items-per-page="vmNotes.pagination.itemsPerPage"
+                                max-size="vmNotes.pagination.maxSize"
+                                total-items="vmNotes.pagination.notes.totalItems"
+                                ng-change="vmNotes.search()"
+                                page-size="vmNotes.notes ? vmNotes.notes.length - 1 : 0"></pagination>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
